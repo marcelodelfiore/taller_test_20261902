@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :reservationsi, only [:create]
+  resources :books do
+    post :reserve, on: :member
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
